@@ -60,8 +60,6 @@ GEM
       temple (~> 0.7.6)
       thor
       tilt
-    hamlit-block (0.3.1)
-      hamlit (~> 2.0)
     hamlit-rails (0.1.0)
       actionpack (>= 4.0.1)
       activesupport (>= 4.0.1)
@@ -187,7 +185,6 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
-  hamlit-block
   hamlit-rails
   jbuilder (~> 2.5)
   jquery-rails
