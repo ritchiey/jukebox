@@ -1,24 +1,13 @@
-# README
+# Jukebox - A demo Trailblazer application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an otherwise pointless Rails application intended to demonstrate
+techniques for improving a Rails Application using the
+[Trailblazer Framework](http://trailblazer.to/).
 
-Things you may want to cover:
+The application provides CRUD for Artists, Songs and Albums which are related
+in much the way you'd expect. A totally boring domain so we can focus on the
+details of the implementation.
 
-* Ruby version
+# Licence
+Jukebox is released under the MIT License.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
