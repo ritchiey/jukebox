@@ -14,6 +14,7 @@ class SongsController < ApplicationController
 
   # GET /songs/new
   def new
+    @artists = Artist.all
     @song = Song.new
   end
 
@@ -69,6 +70,6 @@ class SongsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def song_params
-      params.require(:song).permit(:name, :guid)
+      params.require(:song).permit(:name, :guid, :artist_id)
     end
 end

@@ -3,7 +3,6 @@ class CreateSongs < ActiveRecord::Migration[5.0]
     create_table :songs do |t|
       t.string :name, null: false
       t.string :guid, null: false
-      t.ref :artist
 
       t.timestamps
     end
