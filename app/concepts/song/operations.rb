@@ -10,7 +10,7 @@ class Song < ApplicationRecord
     end
 
     def setup_model!(params)
-      model.artist = Artist.find(params[:song][:artist_id])
+      model.artist = Artist.where(id:(params[:song]||{})[:artist_id]).first
     end
 
     def process(params)

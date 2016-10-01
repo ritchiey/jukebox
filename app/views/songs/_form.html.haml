@@ -1,9 +1,9 @@
-= simple_form_for @song do |f|
-  - if @song.errors.any?
+= simple_form_for @model do |f|
+  - if @model.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@song.errors.count, "error")} prohibited this song from being saved:"
+      %h2= "#{pluralize(@model.errors.count, "error")} prohibited this song from being saved:"
       %ul
-        - @song.errors.full_messages.each do |msg|
+        - @model.errors.full_messages.each do |msg|
           %li= msg
 
   = f.input :name

@@ -14,8 +14,9 @@ class SongsController < ApplicationController
 
   # GET /songs/new
   def new
-    @artists = Artist.all
-    @song = Song.new
+    @artists = Artist.all # used by artist select in view
+    # @song = Song.new
+    form Song::Create
   end
 
   # GET /songs/1/edit
