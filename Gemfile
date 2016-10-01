@@ -39,7 +39,15 @@ gem 'simple_form'
 # Zurb Foundation CSS Framework
 gem 'foundation-rails', '~> 5'
 
+# High level architecture
+gem 'trailblazer'
+gem 'trailblazer-rails'
+
 group :development, :test do
+
+  gem 'pry-rails'
+  gem 'pry-doc'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
