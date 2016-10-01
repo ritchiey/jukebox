@@ -10,7 +10,7 @@ class Artist < ApplicationRecord
     end
 
     def process(params)
-      validate(params) do |form|
+      validate(params[:artist]) do |form|
         form.save
       end
     end
