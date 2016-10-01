@@ -1,9 +1,9 @@
-= form_for @artist do |f|
-  - if @artist.errors.any?
+= form_for @model do |f|
+  - if @model.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@artist.errors.count, "error")} prohibited this artist from being saved:"
+      %h2= "#{pluralize(@model.errors.count, "error")} prohibited this artist from being saved:"
       %ul
-        - @artist.errors.full_messages.each do |msg|
+        - @model.errors.full_messages.each do |msg|
           %li= msg
 
   .field

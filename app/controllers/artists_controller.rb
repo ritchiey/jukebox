@@ -14,7 +14,8 @@ class ArtistsController < ApplicationController
 
   # GET /artists/new
   def new
-    @artist = Artist.new
+    form Artist::Create
+    # @artist = Artist.new
   end
 
   # GET /artists/1/edit
