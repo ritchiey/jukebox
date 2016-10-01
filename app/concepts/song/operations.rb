@@ -8,6 +8,21 @@ class Song < ApplicationRecord
       property :name
       property :guid
       property :artist
+
+      validation :default do
+        required(:name).filled
+        required(:guid).filled
+      end
+
+      validation :unique, if: :default do
+        configure do
+          config.messages_file = 'config/error_messages.yml'
+          def unique?(value)
+            !Song.where(guid: value).exists?
+          end
+        end
+        required(:guid, &:unique?)
+      end
     end
 
     def setup_model!(params)
@@ -19,6 +34,7 @@ class Song < ApplicationRecord
         form.save
       end
     end
+
   end
 
 end

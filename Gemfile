@@ -43,6 +43,11 @@ gem 'foundation-rails', '~> 5'
 gem 'trailblazer'
 gem 'trailblazer-rails'
 
+# See http://trailblazer.to/gems/reform/rails.html
+gem "reform", ">= 2.2.0"
+gem "reform-rails"
+gem "dry-validation"
+
 group :development, :test do
 
   gem 'pry-rails'
