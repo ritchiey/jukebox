@@ -7,6 +7,7 @@ class Song < ApplicationRecord
     contract do
       property :name
       property :guid
+      property :artist
     end
 
     def setup_model!(params)
