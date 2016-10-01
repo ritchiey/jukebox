@@ -1,8 +1,6 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :update, :destroy]
 
-  # GET /songs
-  # GET /songs.json
   def index
     @songs = Song.all
   end
@@ -36,15 +34,10 @@ class SongsController < ApplicationController
   # PATCH/PUT /songs/1
   # PATCH/PUT /songs/1.json
   def update
-    respond_to do |format|
-      if @song.update(song_params)
-        format.html { redirect_to @song, notice: 'Song was successfully updated.' }
-        format.json { render :show, status: :ok, location: @song }
-      else
-        format.html { render :edit }
-        format.json { render json: @song.errors, status: :unprocessable_entity }
-      end
+    run Song::Update do |op|
+      return redirect_to op.model
     end
+    render :edit
   end
 
   # DELETE /songs/1

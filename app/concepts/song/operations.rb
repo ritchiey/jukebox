@@ -18,7 +18,10 @@ class Song < ApplicationRecord
         configure do
           config.messages_file = 'config/error_messages.yml'
           def unique?(value)
-            !Song.where(guid: value).exists?
+            id = options[:form].id
+            scope = Song.where(guid: value)
+            scope = scope.where('id != ?', id) if id
+            !scope.exists?
           end
         end
         required(:guid, &:unique?)
@@ -35,6 +38,11 @@ class Song < ApplicationRecord
       end
     end
 
+  end
+
+
+  class Update < Create
+    model Song, :find
   end
 
 end
